@@ -1,0 +1,18 @@
+<h2>All Events</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.title %></td>
+        <td><%= event.user.email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <h4>Event A</h4>
+
+    <%= form_with(model: Event.new, url: events_event_a_path, method: :post) do |form| %>
+        <%= form.label :title %>
+        <%= form.text_field :title, class: 'form-control' %>
+        <%= form.submit 'Create Event A', class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+
+  <div class="row">
+    <h4>Event B</h4>
+
+    <%= form_with(model: Event.new, url: events_event_b_path, method: :post) do |form| %>
+        <%= form.label :title %>
+        <%= form.text_field :title, class: 'form-control' %>
+        <%= form.submit 'Create Event B', class: 'btn btn-success' %>
+    <% end %>
+  </div>
+</div>
+
+<%= render partial: 'event', locals: { events: @events } %>
